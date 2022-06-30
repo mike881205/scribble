@@ -1,0 +1,7 @@
+#boardTile{
+    height: 1vh;
+    width: 1vw;
+    padding: 1em;
+    border: 1px solid black;
+    text-align: center;
+}
