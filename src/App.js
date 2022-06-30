@@ -1,10 +1,10 @@
 import './App.css';
-import GameBoard from './components/GameBoard';
+import Stage from './components/Stage';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <GameBoard />
+      <Stage />
     </div>
   );
 }

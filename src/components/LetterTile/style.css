@@ -1,7 +1,6 @@
 #letterTile{
-    height: 1vh;
-    width: 1vw;
-    padding: 1em;
-    border: 1px solid #ddd;
-    text-align: center;
+    height: 8vh;
+    max-width: 5vw;
+    margin: 0.2%;
+    background-color: goldenrod;
 }
