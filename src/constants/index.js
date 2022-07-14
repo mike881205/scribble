@@ -2,7 +2,7 @@ const Constants = {
     generateLetters: () => {
         const letters = [
             {
-                letter: 'blank',
+                letter: ' ',
                 points: 0,
                 count: 2
             },
@@ -141,11 +141,18 @@ const Constants = {
     },
     generatePlayers: num => {
         const players = []
-        for (let i = 0; i<num; i++) {
-            players.push({player: (i+1), hand: []});
+        for (let i = 0; i < num; i++) {
+            players.push(
+                {
+                    id: i,
+                    hand: [],
+                    active: false,
+                    selections: {Letter: null, Tile: null}
+                }
+            );
         };
         return players;
-    }
+    },
 };
 
 export default Constants;

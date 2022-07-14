@@ -3,20 +3,18 @@ import LetterTile from "../LetterTile";
 import { Row } from "react-bootstrap";
 import './style.css'
 
-const PlayerHand = ({ player }) => {
-
-    const hand = player.hand;
+const PlayerHand = ({ Player, selectLetter }) => {
 
     return (
         <Row id="handGrid" className="grid">
             {
-                hand.map((l, i) => {
-                    const { letter, points } = l;
+                Player.hand.map((l, i) => {
+                    l.id = i;
                     return (
                         <LetterTile
                             key={`letter: ${i}`}
-                            letter={letter}
-                            points={points}
+                            Letter={l}
+                            selectLetter={selectLetter}
                         />
                     )
                 })

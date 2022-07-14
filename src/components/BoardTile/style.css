@@ -3,3 +3,7 @@
     width: 1vw;
     padding: 1em;
 }
+
+#boardTile > p {
+    font-size: medium;
+}

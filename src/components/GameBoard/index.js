@@ -1,23 +1,23 @@
-import { React, useEffect } from "react";
+import { React } from "react";
 import BoardTile from "../BoardTile";
 import './style.css'
 
-const GameBoard = ({gameBoard}) => {
+const GameBoard = ({ Board, selectBoardTile, Player }) => {
 
     return (
         <div id="boardGrid" className="grid">
             {
-                !gameBoard ?
-                    <>Loading...</>
-                    :
-                    gameBoard.map((obj, i) => {
-                        return (
-                            <BoardTile
-                                key={i + 1}
-                                tile={obj}
-                            />
-                        )
-                    })
+                Board.map((Tile, i) => {
+                    Tile.id = i;
+                    return (
+                        <BoardTile
+                            key={i + 1}
+                            Tile={Tile}
+                            selectBoardTile={selectBoardTile}
+                            selections={Player.selections}
+                        />
+                    )
+                })
             }
         </div>
     );
